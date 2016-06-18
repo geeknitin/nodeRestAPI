@@ -13,7 +13,7 @@ var app = express();
 
 app.get('/:id', function (req, res) {
 // First read existing users.
-	fs.readFile("/Users/nitigupta/Desktop/users.json", 'utf8', function (err, data) {
+	fs.readFile("users.json", 'utf8', function (err, data) {
 		data = JSON.parse( data );
 
 		var user = data["user" + req.params.id];
